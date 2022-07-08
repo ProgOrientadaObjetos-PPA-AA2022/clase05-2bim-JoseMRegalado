@@ -38,4 +38,18 @@ public class TiposTransporte {
         return promedioTarifas;
     }
     
+    @Override
+    public String toString() {
+        String cadena = String.format("Reporte de Transportes\n");
+
+        for (int i = 0; i < obtenerTransportes().size(); i++) {
+            cadena = String.format("%s\n%s",
+                    cadena,
+                    transportes);
+        }
+        cadena = String.format("%s\nPromedio Tarifas: %.2f\n",
+                cadena, promedioTarifas);
+        return cadena;
+    }
+    
 }
