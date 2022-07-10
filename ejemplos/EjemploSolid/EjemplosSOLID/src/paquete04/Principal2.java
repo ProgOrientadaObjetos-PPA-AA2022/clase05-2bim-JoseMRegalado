@@ -30,20 +30,21 @@ public class Principal2 {
         TransporteAereo aereo = new TransporteAereo();
         aereo.establecerAerolinea("Avianca");
         aereo.establecerTarifa();
-        
+
         TransporteBus bus = new TransporteBus();
-                    bus.establecerCooperativaBus("24 Mayo");
-                    bus.establecerTarifa();
-                    
-                    TransporteTaxi taxi = new TransporteTaxi();
-                    taxi.establecerCooperativaTaxi("Yahuarcuna");
-                    taxi.establecerTarifa();
-                    
-                    TransporteMaritimo mar = new TransporteMaritimo();
-                    mar.establecerNombre("ballenita");
-                    mar.establecerTarifa();
+        bus.establecerCooperativaBus("24 Mayo");
+        bus.establecerTarifa();
+
+        TransporteTaxi taxi = new TransporteTaxi();
+        taxi.establecerCooperativaTaxi("Yahuarcuna");
+        taxi.establecerTarifa();
+
+        TransporteMaritimo mar = new TransporteMaritimo();
+        mar.establecerNombre("ballenita");
+        mar.establecerTarifa();
 
         do {
+
             System.out.println("Tipo de Transporte a ingresar\n"
                     + "Ingrese (1) para Transporte Aereo\n"
                     + "Ingrese (2) para Transporte Bus\n"
@@ -54,12 +55,19 @@ public class Principal2 {
             switch (op) {
                 case 1:
                     lista.add(aereo);
+                    break;
                 case 2:
                     lista.add(bus);
+                    break;
                 case 3:
                     lista.add(taxi);
+                    break;
                 case 4:
                     lista.add(mar);
+                    break;
+                default:
+                    System.out.println("Error de opción, digite un"
+                            + "número entre 1 y 4");
             }
 
             sc.nextLine();
@@ -71,20 +79,22 @@ public class Principal2 {
             continuar = sc.nextLine();
 
         } while (continuar.equals("S"));
-        
+
         TiposTransporte tipos = new TiposTransporte();
         tipos.establecerTransportes(lista);
         tipos.establecerPromedioTarifas();
+        
+        System.out.println("Reporte transportes: ");
 
-         for (int i = 0; i < tipos.size(); i++) {
-              
-            tipos.ge
+        for (int i = 0; i < lista.size(); i++) {
 
-            System.out.printf("Datos Estudiante\n"
+            System.out.printf("\n"
                     + "%s\n",
-                    estudiantes.get(i));
+                    lista.get(i));
 
         }
+        System.out.printf("Promedio de tarifas: %.2f\n", 
+                tipos.obtenerPromedioTarifas());
 
     }
 }
