@@ -35,7 +35,7 @@ public class EvaluacionObjetiva implements EvaluacionTipoUno {
     public void establecerPromedioObjetivas() {
         promedioObjetivas = obtenerTotalPreguntas() / obtenerNumeroPreguntas();
     }
-
+    
     @Override
     public double obtenerPromedioObjetivas() {
         return promedioObjetivas;

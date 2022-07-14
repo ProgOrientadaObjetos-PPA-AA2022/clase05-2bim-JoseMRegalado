@@ -21,6 +21,5 @@ public class Principal {
         ensayo2.establecerTotalPreguntas(30);
         ensayo2.establecerPromedioObjetivas();
         System.out.println(ensayo2.obtenerPromedioObjetivas());
-        
     }
 }
