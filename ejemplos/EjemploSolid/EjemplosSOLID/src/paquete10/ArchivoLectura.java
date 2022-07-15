@@ -52,18 +52,19 @@ public class ArchivoLectura {
         return generadoresP;
     }
     
-    @Override
+     @Override
     public String toString() {
         String cadena = "Lista de Generadores de Peliculas\n";
         for (int i = 0; i < obtenerGeneradores().size(); i++) {
-            GeneradorPeliculas gp = obtenerGeneradores().get(i);
+            GeneradorPeliculas p = obtenerGeneradores().get(i);
             cadena = String.format("%s(%d) %s\n", cadena,
                     i + 1,
-                    gp.obtenerUrl());
+                    p);
         }
 
         return cadena;
     }
+
 
 
     public void cerrarArchivo() {

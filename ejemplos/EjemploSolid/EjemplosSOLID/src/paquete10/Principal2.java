@@ -3,7 +3,7 @@ package paquete10;
 
 public class Principal2 {
     public static void main(String[] args) {
-        String nombreArchivo = "datos/generadores.dat";
+        String nombreArchivo = "ArchivoGenerador.dat";
         
         APINetflix api = new APINetflix();
         api.establecerApiKey("123455");
@@ -45,9 +45,13 @@ public class Principal2 {
         
         ArchivoEscritura archivo = new ArchivoEscritura(nombreArchivo);
         archivo.establecerRegistro(gp);
+        archivo.establecerSalida();
         archivo.establecerRegistro(gp2);
+        archivo.establecerSalida();
         archivo.establecerRegistro(gp3);
+        archivo.establecerSalida();
         archivo.establecerRegistro(gp4);
+        archivo.establecerSalida();
         
     }
 }
